@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke-API</title>
+    <link rel="shortcut icon" href="images/pokeball.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>   
+    <!-- main -->
+    <main class="flex">
+        <!-- btns-de-imgagen -->
+        <div class="btns-imagenes">
+            <a id="btn-1" class="btns-imagenes-uni waves-effect waves-light btn">NEW ONE</a>
+            <a id="btn-2" class="btns-imagenes-uni waves-effect waves-light btn">OLD SHOOL</a>
+            <a id="btn-3" class="btns-imagenes-uni waves-effect waves-light btn">SPRITE</a>
+            
+        </div> 
+        
+        <!-- spiner loading -->
+        <div id="loading" class="spinner"></div>
+
+        <!-- card pokemon -->
+        <section id="card-pokemon">
+            <!-- template insertion -->  
+        </section>
+
+        <!-- btn random -->
+        <a class="btn-random btn waves-effect waves-red" data-random="random"><i class="btn-random-icon material-icons left" data-random="random">refresh</i>random</a>    
+    </main>
+
+    <!-- template -->
+    <template id="template-card">
+        <!-- card -->
+        <article class="card">
+            <img src="./images/bg-pattern-card.svg" alt="img header card" class="card-header">
+            <div class="card-body">
+                <img src="./images/image-victor.jpg" alt="img de victor" class="card-body-img">
+                <h1 class="card-body-title">
+                    Victor Chars
+                    <span>26</span>
+                </h1>
+                <p class="card-body-text">London</p>
+            </div>
+            <div class="card-footer">
+                <div class="card-footer-social">
+                    <h3>80K</h3>
+                    <p>HP</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3>803K</h3>
+                    <p>Attack</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3>1.4K</h3>
+                    <p>Defense</p>
+                </div>
+
+                <div class="card-footer-social">
+                    <h3>1.4K</h3>
+                    <p>Speed</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3>803K</h3>
+                    <p>Sp.Attack</p>
+                </div>
+                <div class="card-footer-social">
+                    <h3>1.4K</h3>
+                    <p>Sp.Defense</p>
+                </div>
+            </div>
+        </article>
+    </template>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

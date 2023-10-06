@@ -1,0 +1,192 @@
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --prubea: rgb(126 , 94 , 93);
+  --prubea: rgb(126, 78, 39);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  min-width: 400px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  display: none;
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3498db;
+  animation: spin 0.7s linear infinite;
+}
+
+.spinner::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  right: -18px;
+  bottom: -18px;
+  background-image: url("/images/pokeball.png");
+  background-size: cover;
+  animation: spin-reverse 0.7s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.card {
+  background-color: white;
+  width: 32.06rem;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 10px 15px 15px rgba(3, 0, 6, 0.201);
+}
+.card-header {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid rgba(153, 153, 153, 0.2509803922);
+}
+.card-body-img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+  border-radius: 50%;
+  margin-top: -105px;
+  background-color: white;
+}
+.card-body-title {
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+.card-body-title span {
+  color: var(--dark-gray);
+  font-weight: 400;
+  margin-right: 0.5rem;
+}
+.card-body-text {
+  color: var(--dark-gray);
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgba(234, 230, 230, 0.3333333333);
+}
+.card-footer-social {
+  flex-basis: 33.33%;
+  text-align: center;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.card-footer-social h3 {
+  font-size: 2.3rem;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.card-footer-social p {
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+}
+
+.btns-imagenes {
+  position: absolute;
+  transform: translateY(-31rem);
+  z-index: 1; /* Ensure the div is above other elements */
+}
+.btns-imagenes-uni {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 9px;
+  animation: jumpAnimation 1s infinite;
+}
+
+@keyframes jumpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.btn-random {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 4.3rem;
+  transform: translateY(-33rem);
+  margin-top: 62rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border-radius: 20px;
+  animation: animateLetters 1s infinite;
+}
+.btn-random-icon {
+  font-size: 2.8rem !important;
+  animation: spin 3s infinite linear;
+}
+
+@keyframes animateLetters {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=estilos.css.map */
