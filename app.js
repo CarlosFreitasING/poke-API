@@ -112,10 +112,10 @@ const fetchData = async (id) => {
           typesIcon: tiposPokeIcono,
       };
 
+      btnActivo() == 0? await obtenerColorPrincipal(pokemon.img) :
+      btnActivo() == 1? await obtenerColorPrincipal(pokemon.img2) :
+                        await obtenerColorPrincipal(pokemon.img3)
     
-    await obtenerColorPrincipal(pokemon.img2);
-                        
-      
       pintarCard(pokemon);
 
       }catch (error){
@@ -134,7 +134,7 @@ const pintarCard = (pokemon) =>{
 
   btnActivo() == 0? clone.querySelector('.card-body-img').setAttribute('src',pokemon.img) :
   btnActivo() == 1? clone.querySelector('.card-body-img').setAttribute('src',pokemon.img2) :
-                    clone.querySelector('.card-body-img').setAttribute('src',pokemon.img3) 
+                    clone.querySelector('.card-body-img').setAttribute('src',pokemon.img3);
 
   clone.querySelector('.card-body-title').innerHTML = `<span>n.º${pokemon.id}</span> ${pokemon.name} `;
   clone.querySelector('.card-body-text').textContent = `${pokemon.typesIcon.flatMap((e,i)=>[e,pokemon.types[i]]).join(' ')}`;
